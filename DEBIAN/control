@@ -1,0 +1,6 @@
+Package: spice-autorandr
+Version: 0.1  
+Priority: optional
+Architecture: amd64
+Maintainer: itrooz@pm.me    
+Description: Auto resize screen in xfce

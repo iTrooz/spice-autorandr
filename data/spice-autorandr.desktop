@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Spice desktop resolution helper
 Comment=Automatically adjust display resolution for Spice guests
-Exec=/usr/local/bin/spice-autorandr
+Exec=spice-autorandr
 Terminal=false
 Type=Application
 Categories=

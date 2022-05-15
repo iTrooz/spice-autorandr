@@ -18,15 +18,27 @@ jobs:
     - name: autoreconf
       run: autoreconf -is
       
-    - name: configure
+    - name: configure --prefix=/usr
       run: ./configure
     
     - name: make
       run: make
     
-    - name: Upload
+    - name: Create deb
+      run: |
+        make install DESTDIR=build
+        cp -r DEBIAN build
+        dpkg-deb --build build spice-autorandr.deb
+    
+    - name: Upload binary
       uses: actions/upload-artifact@v3
       with:
         name: spice-autorandr
         path: spice-autorandr
+    
+    - name: Upload deb
+      uses: actions/upload-artifact@v3
+      with:
+        name: spice-autorandr.deb
+        path: spice-autorandr.deb
     
