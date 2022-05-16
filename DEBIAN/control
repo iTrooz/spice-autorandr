@@ -1,5 +1,5 @@
 Package: spice-autorandr
-Version: 0.1  
+Version: 1.0
 Priority: optional
 Architecture: amd64
 Maintainer: itrooz@pm.me    
